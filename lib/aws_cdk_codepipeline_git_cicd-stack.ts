@@ -27,13 +27,13 @@ export class AwsCdkCodepipelineGitCicdStack extends cdk.Stack {
     });
 
     const testingStage = democicdpipeline.addStage(new PipelineAppStage(this, 'test', {
-      env: { account: '196715057542', region: 'us-east-1' }
+      env: { account: '951845455890', region: 'us-east-1' }
     }));
 
     testingStage.addPost(new ManualApprovalStep('approval'));
 
     const prodStage = democicdpipeline.addStage(new PipelineAppStage(this, 'prod', {
-      env: { account: '196715057542', region: 'us-east-1' }
+      env: { account: '951845455890', region: 'us-east-1' }
     }));
 
   }
